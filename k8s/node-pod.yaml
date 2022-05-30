@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: node-pod
+  labels:
+    app: node-helloworld
+spec:
+  containers:
+  - name: flask
+    image: jakecooper/railway_kube:latest
+    ports:
+    - containerPort: 8080

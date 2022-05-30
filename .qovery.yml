@@ -1,0 +1,29 @@
+---
+application:
+  name: "railway-gh"
+  project: "tes"
+  organization: "QoveryCommunity"
+  storage:
+  - name: "test"
+    size: "200"
+    type: "fast_ssd"
+    mount_point: "/mnt/test"
+databases:
+- type: "POSTGRESQL"
+  name: "test"
+  version: "11"
+- type: "MYSQL"
+  name: "test"
+  version: "8.0"
+- type: "MONGODB"
+  name: "test"
+  version: "4.4"
+- type: "REDIS"
+  name: "test"
+  version: "6"
+routers:
+- name: "main-railway-gh"
+  routes:
+  - application_name: "railway-gh"
+    paths:
+    - "/*"
